@@ -5,8 +5,8 @@
   xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
   xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
   xsi:type="MailApp">
-  <Id>15957DBF-94E9-4D57-8A8D-CC2260C69174</Id>
-  <Version>1.0.0.1</Version>
+  <Id>6784F149-5C0D-43A8-9D55-66FE5F53DFDF</Id>
+  <Version>1.0.0.2</Version>
   <ProviderName>ATOM</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Sample Outlook Add-in"/>

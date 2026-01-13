@@ -86,8 +86,164 @@
         <bt:String id="TaskpaneButton.Tooltip" DefaultValue="ATOM Aviation Deal support add-in(QA)"/>
       </bt:LongStrings>
     </Resources>
+    
     <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.1"
       xsi:type="VersionOverridesV1_1">
+      <Requirements>
+        <bt:Sets DefaultMinVersion="1.3">
+          <bt:Set Name="Mailbox" />
+        </bt:Sets>
+      </Requirements>
+      <Hosts>
+        <Host xsi:type="MailHost">
+          <DesktopFormFactor>
+            <FunctionFile resid="functionsFile" />
+            <ExtensionPoint xsi:type="MessageReadCommandSurface">
+              <OfficeTab id="TabDefault">
+                <Group id="msgReadCmdGroup">
+                  <Label resid="groupLabel" />
+                  <Control xsi:type="Button" id="showOneNoteButtonMsgRead">
+                    <Label resid="oneNoteButtonLabel" />
+                    <Supertip>
+                      <Title resid="oneNoteHoverTitle" />
+                      <Description resid="oneNoteHoverDescription" />
+                    </Supertip>
+                    <Icon>
+                      <bt:Image size="16" resid="icon-16" />
+                      <bt:Image size="32" resid="icon-32" />
+                      <bt:Image size="80" resid="icon-80" />
+                    </Icon>
+                    <Action xsi:type="ShowTaskpane">
+                      <SourceLocation resid="taskPaneUrlRead" />
+                    </Action>
+                  </Control>
+                </Group>
+              </OfficeTab>
+            </ExtensionPoint>
+            <ExtensionPoint xsi:type="AppointmentOrganizerCommandSurface">
+              <OfficeTab id="ApptOrganizerTab">
+                <Group id="apptOrganizerCmdGroup">
+                  <Label resid="groupLabel" />
+                  <Control xsi:type="Button" id="showOneNoteButtonApptOrganizer">
+                    <Label resid="meetingNotesButtonLabel" />
+                    <Supertip>
+                      <Title resid="meetingNotesHoverTitle" />
+                      <Description resid="oneNoteHoverDescription" />
+                    </Supertip>
+                    <Icon>
+                      <bt:Image size="16" resid="icon-16" />
+                      <bt:Image size="32" resid="icon-32" />
+                      <bt:Image size="80" resid="icon-80" />
+                    </Icon>
+                    <Action xsi:type="ShowTaskpane">
+                      <SourceLocation resid="taskPaneUrlWrite" />
+                    </Action>
+                  </Control>
+                </Group>
+              </OfficeTab>
+            </ExtensionPoint>
+            <ExtensionPoint xsi:type="AppointmentAttendeeCommandSurface">
+              <OfficeTab id="ApptAttendeeTab">
+                <Group id="apptAttendeeeCmdGroup">
+                  <Label resid="groupLabel" />
+                  <Control xsi:type="Button" id="showOneNoteButtonApptAttendee">
+                    <Label resid="oneNoteButtonLabel" />
+                    <Supertip>
+                      <Title resid="oneNoteHoverTitle" />
+                      <Description resid="oneNoteHoverDescription" />
+                    </Supertip>
+                    <Icon>
+                      <bt:Image size="16" resid="icon-16" />
+                      <bt:Image size="32" resid="icon-32" />
+                      <bt:Image size="80" resid="icon-80" />
+                    </Icon>
+                    <Action xsi:type="ShowTaskpane">
+                      <SourceLocation resid="taskPaneUrlRead" />
+                    </Action>
+                  </Control>
+                </Group>
+              </OfficeTab>
+            </ExtensionPoint>
+          </DesktopFormFactor>
+          <MobileFormFactor>
+            <ExtensionPoint xsi:type="MobileMessageReadCommandSurface">
+              <Group id="mobileMsgRead">
+                <Label resid="groupLabel" />
+                <Control xsi:type="MobileButton" id="showOneNoteButtonMobileMsgRead">
+                  <Label resid="oneNoteButtonLabel" />
+                  <Icon xsi:type="bt:MobileIconList">
+                    <bt:Image size="25" scale="1" resid="icon-25" />
+                    <bt:Image size="25" scale="2" resid="icon-25" />
+                    <bt:Image size="25" scale="3" resid="icon-25" />
+
+                    <bt:Image size="32" scale="1" resid="icon-32" />
+                    <bt:Image size="32" scale="2" resid="icon-32" />
+                    <bt:Image size="32" scale="3" resid="icon-32" />
+
+                    <bt:Image size="48" scale="1" resid="icon-48" />
+                    <bt:Image size="48" scale="2" resid="icon-48" />
+                    <bt:Image size="48" scale="3" resid="icon-48" />
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <SourceLocation resid="taskPaneUrlRead" />
+                  </Action>
+                </Control>
+              </Group>
+            </ExtensionPoint>
+          </MobileFormFactor>
+        </Host>
+      </Hosts>
+      <Resources>
+        <bt:Images>
+          <bt:Image id="icon-16"
+            DefaultValue="https://outlook-addin-qa.elsecolimited.com:8092/outlook-plugin/quality/aviation/assets/icon-64.png" />
+          <bt:Image id="icon-25"
+            DefaultValue="https://outlook-addin-qa.elsecolimited.com:8092/outlook-plugin/quality/aviation/assets/icon-64.png" />
+          <bt:Image id="icon-32"
+            DefaultValue="https://outlook-addin-qa.elsecolimited.com:8092/outlook-plugin/quality/aviation/assets/icon-64.png" />
+          <bt:Image id="icon-48"
+            DefaultValue="https://outlook-addin-qa.elsecolimited.com:8092/outlook-plugin/quality/aviation/assets/icon-64.png" />
+          <bt:Image id="icon-80"
+            DefaultValue="https://outlook-addin-qa.elsecolimited.com:8092/outlook-plugin/quality/aviation/assets/icon-64.png" />
+        </bt:Images>
+        <bt:Urls>
+          <bt:Url id="taskPaneUrlRead"
+            DefaultValue="https://outlook-addin-qa.elsecolimited.com:8092/outlook-plugin/quality/aviation/sample.html">
+          </bt:Url>
+          <bt:Url id="taskPaneUrlWrite"
+            DefaultValue="https://outlook-addin-qa.elsecolimited.com:8092/outlook-plugin/quality/aviation/sample.html">
+          </bt:Url>
+          <bt:Url id="functionsFile"
+            DefaultValue="https://outlook-addin-qa.elsecolimited.com:8092/outlook-plugin/quality/aviation/sample.html">
+          </bt:Url>
+        </bt:Urls>
+        <bt:ShortStrings>
+          <bt:String id="oneNoteButtonLabel" DefaultValue="Send to ATOM">
+            <bt:Override Locale="af-ZA" Value="Stuur na OneNote" />
+            <bt:Override Locale="zh-TW" Value="傳送到 OneNote" />
+          </bt:String>
+          <bt:String id="quickAddButtonLabel" DefaultValue="Quick add">
+            <bt:Override Locale="af-ZA" Value="Kitsbyvoeg" />
+          </bt:String>
+          <bt:String id="meetingNotesButtonLabel" DefaultValue="Meeting Notes">
+            <bt:Override Locale="af-ZA" Value="Vergaderingnotas" />
+          </bt:String>
+          <bt:String id="groupLabel" DefaultValue="OneNote" />
+          <bt:String id="oneNoteHoverTitle" DefaultValue="Send to OneNote">
+            <bt:Override Locale="af-ZA" Value="Stuur na OneNote" />
+          </bt:String>
+          <bt:String id="meetingNotesHoverTitle" DefaultValue="Meeting Notes">
+            <bt:Override Locale="af-ZA" Value="Vergaderingnotas" />
+          </bt:String>
+        </bt:ShortStrings>
+        <bt:LongStrings>
+          <bt:String id="oneNoteHoverDescription"
+            DefaultValue="Save your emails or meeting details to OneNote.">
+            <bt:Override Locale="zh-TW" Value="將您的電子郵件或會議詳細資料儲存到 OneNote。" />
+          </bt:String>
+        </bt:LongStrings>
+      </Resources>
+
       <WebApplicationInfo>
         <Id>4df68765-37ba-4b6a-9fea-525c0fb7d1b9</Id>
         <Resource>api://outlook-addin-qa.elsecolimited.com:8092/4df68765-37ba-4b6a-9fea-525c0fb7d1b9</Resource>

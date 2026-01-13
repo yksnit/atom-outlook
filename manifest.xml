@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0" xsi:type="MailApp">
-  <Id>6784F149-5C0D-43A8-9D55-66FE5F53DFDF</Id>
+  <Id>3919dea8-dce6-423c-aeb9-148fd6e8c63B</Id>
   <Version>1.0.0.0</Version>
   <ProviderName>ATOM</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="Sample Outlook Add-in"/>
-  <Description DefaultValue="Insert a quick reply from a task pane while composing messages."/>
-  <IconUrl DefaultValue="https://yksnit.github.io/atom-outlook/assets/icon-32.png"/>
-  <HighResolutionIconUrl DefaultValue="https://yksnit.github.io/atom-outlook/assets/icon-80.png"/>
-  <SupportUrl DefaultValue="https://yksnit.github.io/atom-outlook"/>  <AppDomains>
-    <AppDomain>https://yksnit.github.io</AppDomain>
+  <DisplayName DefaultValue="Sample - ATOM Aviation Deals(QA)"/>
+  <Description DefaultValue="ATOM Insurnace MS Outlook add-ins for Deals"/>
+  <IconUrl DefaultValue="https://yksnit.github.io/atom-outlook/assets/icon-64.png"/>
+  <HighResolutionIconUrl DefaultValue="https://yksnit.github.io/atom-outlook/assets/icon-128.png"/>
+  <SupportUrl DefaultValue="https://www.atom-insurance.com"/>
+  <AppDomains>
+    <AppDomain>https://www.atom-insurance.com</AppDomain>
   </AppDomains>
   <Hosts>
     <Host Name="Mailbox"/>
@@ -22,7 +23,7 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://yksnit.github.io/taskpane.html"/>
+        <SourceLocation DefaultValue="https://yksnit.github.io/atom-outlook/index.html"/>
         <RequestedHeight>250</RequestedHeight>
       </DesktopSettings>
     </Form>
@@ -69,19 +70,20 @@
     </Hosts>
     <Resources>
       <bt:Images>
-        <bt:Image id="Icon.32x32" DefaultValue="https://yksnit.github.io/assets/icon-32.png"/>
-        <bt:Image id="Icon.80x80" DefaultValue="https://yksnit.github.io/assets/icon-80.png"/>
-      </bt:Images>
+        <bt:Image id="Icon.16x16" DefaultValue="https://yksnit.github.io/atom-outlook/assets/icon-16.png"/>
+          <bt:Image id="Icon.32x32" DefaultValue="https://yksnit.github.io/atom-outlook/assets/icon-32.png"/>
+          <bt:Image id="Icon.80x80" DefaultValue="https://yksnit.github.io/atom-outlook/assets/icon-80.png"/>
+        </bt:Images>
       <bt:Urls>
-         <bt:Url id="Commands.Url" DefaultValue="https://yksnit.github.io/commands.html"/>
-          <bt:Url id="Taskpane.Url" DefaultValue="https://yksnit.github.io/taskpane.html"/>
+         <bt:Url id="Commands.Url" DefaultValue="https://yksnit.github.io/atom-outlook/commands.html"/>
+          <bt:Url id="Taskpane.Url" DefaultValue="https://yksnit.github.io/atom-outlook/taskpane.html"/>
         </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GroupLabel" DefaultValue="Add-in"/>
-        <bt:String id="TaskpaneButton.Label" DefaultValue="SAMPLE"/>
+        <bt:String id="TaskpaneButton.Label" DefaultValue="Aviation"/>
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="SAMPLE - ATOM Aviation Deal support add-in(QA)"/>
+        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="ATOM Aviation Deal support add-in(QA)"/>
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>

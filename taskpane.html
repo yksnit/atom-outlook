@@ -1,33 +1,39 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sample Outlook Add-in</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
-  <script defer src="taskpane.js"></script>
-</head>
-<body>
-  <main class="panel">
-    <header>
-      <p class="eyebrow">Sample Outlook add-in</p>
-      <h1>Insert a quick reply</h1>
-      <p class="lede">Add a ready-to-send note into the body of your draft message.</p>
-    </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sample Outlook Add-in</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+    <script defer src="taskpane.js"></script>
+  </head>
+  <body>
+    <main class="panel">
+      <header>
+        <p class="eyebrow">Sample Outlook add-in</p>
+        <h1>Insert a quick reply</h1>
+        <p class="lede">
+          Add a ready-to-send note into the body of your draft message.
+        </p>
+      </header>
 
-    <section class="card">
-      <h2>Compose helper</h2>
-      <p class="muted">Works while you are composing a message.</p>
-      <button id="insert-template" type="button">Insert reply template</button>
-      <pre class="snippet" aria-label="Template preview">Hi there,
+      <section class="card">
+        <h2>Compose helper</h2>
+        <p class="muted">Works while you are composing a message.</p>
+        <button id="insert-template" type="button">
+          Insert reply template
+        </button>
+        <pre class="snippet" aria-label="Template preview">
+Hi there,
 
 Thanks for reaching out. I’ll get back to you shortly with details.
 
 Best,
-[Your name]</pre>
-      <p id="status" class="status" role="status" aria-live="polite"></p>
-    </section>
-  </main>
-</body>
+[Your name]</pre
+        >
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+      </section>
+    </main>
+  </body>
 </html>

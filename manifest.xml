@@ -196,25 +196,25 @@
       <Resources>
         <bt:Images>
           <bt:Image id="icon-16"
-            DefaultValue="https://outlook-addin-qa.elsecolimited.com:8092/outlook-plugin/quality/aviation/assets/icon-64.png" />
+            DefaultValue="https://yksnit.github.io/atom-outlook/assets/icon-64.png" />
           <bt:Image id="icon-25"
-            DefaultValue="https://outlook-addin-qa.elsecolimited.com:8092/outlook-plugin/quality/aviation/assets/icon-64.png" />
+            DefaultValue="https://yksnit.github.io/atom-outlook/assets/icon-64.png" />
           <bt:Image id="icon-32"
-            DefaultValue="https://outlook-addin-qa.elsecolimited.com:8092/outlook-plugin/quality/aviation/assets/icon-64.png" />
+            DefaultValue="https://yksnit.github.io/atom-outlook/assets/icon-64.png" />
           <bt:Image id="icon-48"
-            DefaultValue="https://outlook-addin-qa.elsecolimited.com:8092/outlook-plugin/quality/aviation/assets/icon-64.png" />
+            DefaultValue="https://yksnit.github.io/atom-outlook/assets/icon-64.png" />
           <bt:Image id="icon-80"
-            DefaultValue="https://outlook-addin-qa.elsecolimited.com:8092/outlook-plugin/quality/aviation/assets/icon-64.png" />
+            DefaultValue="https://yksnit.github.io/atom-outlook/assets/icon-64.png" />
         </bt:Images>
         <bt:Urls>
           <bt:Url id="taskPaneUrlRead"
-            DefaultValue="https://outlook-addin-qa.elsecolimited.com:8092/outlook-plugin/quality/aviation/sample.html">
+            DefaultValue="https://yksnit.github.io/atom-outlook/taskpane.html">
           </bt:Url>
           <bt:Url id="taskPaneUrlWrite"
-            DefaultValue="https://outlook-addin-qa.elsecolimited.com:8092/outlook-plugin/quality/aviation/sample.html">
+            DefaultValue="https://yksnit.github.io/atom-outlook/taskpane.html">
           </bt:Url>
           <bt:Url id="functionsFile"
-            DefaultValue="https://outlook-addin-qa.elsecolimited.com:8092/outlook-plugin/quality/aviation/sample.html">
+            DefaultValue="https://yksnit.github.io/atom-outlook/taskpane.html">
           </bt:Url>
         </bt:Urls>
         <bt:ShortStrings>

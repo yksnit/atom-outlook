@@ -1,39 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Sample Outlook Add-in</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Get Access Token</title>
+
+    <!-- W3.CSS -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+
+    <!-- Office JS -->
     <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
-    <script defer src="taskpane.js"></script>
+
+    <style>
+      .token-box {
+        word-break: break-all;
+        white-space: pre-wrap;
+        font-family: monospace;
+        font-size: 12px;
+      }
+    </style>
   </head>
-  <body>
-    <main class="panel">
-      <header>
-        <p class="eyebrow">Sample Outlook add-in</p>
-        <h1>Insert a quick reply</h1>
-        <p class="lede">
-          Add a ready-to-send note into the body of your draft message.
-        </p>
-      </header>
 
-      <section class="card">
-        <h2>Compose helper</h2>
-        <p class="muted">Works while you are composing a message.</p>
-        <button id="insert-template" type="button">
-          Insert reply template
-        </button>
-        <pre class="snippet" aria-label="Template preview">
-Hi there,
+  <body class="w3-padding">
+    <h3 class="w3-text-blue">Outlook Add-in Token Fetch</h3>
 
-Thanks for reaching out. I’ll get back to you shortly with details.
+    <button class="w3-button w3-blue w3-margin-top" onclick="getToken()">
+      Get Token
+    </button>
 
-Best,
-[Your name]</pre
-        >
-        <p id="status" class="status" role="status" aria-live="polite"></p>
-      </section>
-    </main>
+    <!-- Modal -->
+    <div id="resultModal" class="w3-modal">
+      <div class="w3-modal-content w3-card-4">
+        <header class="w3-container w3-blue">
+          <span onclick="closeModal()" class="w3-button w3-display-topright"
+            >&times;</span
+          >
+          <h4 id="modalTitle">Result</h4>
+        </header>
+
+        <div class="w3-container w3-padding">
+          <div id="modalBody" class="token-box"></div>
+        </div>
+
+        <footer class="w3-container w3-light-grey w3-padding">
+          <button class="w3-button w3-grey" onclick="closeModal()">
+            Close
+          </button>
+        </footer>
+      </div>
+    </div>
+
+    <script>
+      Office.onReady(() => {
+        console.log("Office.js ready");
+      });
+
+      function getToken() {
+        Office.context.auth.getAccessTokenAsync(
+          {
+            allowSignInPrompt: true,
+            allowConsentPrompt: true,
+            // forMSGraphAccess: true,
+          },
+          function (result) {
+            if (result.status === Office.AsyncResultStatus.Succeeded) {
+              showModal("Access Token", result.value);
+            } else {
+              const error = `
+Error Code: ${result.error.code}
+Message: ${result.error.message}
+                        `;
+              showModal("Error Fetching Token", error);
+            }
+          }
+        );
+      }
+
+      function showModal(title, body) {
+        document.getElementById("modalTitle").innerText = title;
+        document.getElementById("modalBody").innerText = body;
+        document.getElementById("resultModal").style.display = "block";
+      }
+
+      function closeModal() {
+        document.getElementById("resultModal").style.display = "none";
+      }
+    </script>
   </body>
 </html>

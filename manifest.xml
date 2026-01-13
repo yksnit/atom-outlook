@@ -6,8 +6,8 @@
   xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
   xsi:type="MailApp">
   <Id>15957DBF-94E9-4D57-8A8D-CC2260C69174</Id>
-  <Version>1.0.0.0</Version>
-  <ProviderName>Your Name</ProviderName>
+  <Version>1.0.0.1</Version>
+  <ProviderName>ATOM</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Sample Outlook Add-in"/>
   <Description DefaultValue="Insert a quick reply from a task pane while composing messages."/>
@@ -31,21 +31,17 @@
         <SourceLocation DefaultValue="https://yksnit.github.io/atom-outlook/taskpane.html"/>
       </DesktopSettings>
     </Form>
-    <Form xsi:type="ItemRead">
-      <DesktopSettings>
-        <SourceLocation DefaultValue="https://yksnit.github.io/atom-outlook/taskpane.html"/>
-      </DesktopSettings>
-    </Form>
   </FormSettings>
   <Permissions>ReadWriteItem</Permissions>
   <Rule xsi:type="RuleCollection" Mode="Or">
     <Rule xsi:type="ItemIs" ItemType="Message" FormType="Edit"/>
   </Rule>
   <DisableEntityHighlighting>false</DisableEntityHighlighting>
-  <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.0" xsi:type="VersionOverridesV1_0">
+
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.1" xsi:type="VersionOverridesV1_1">
     <Requirements>
       <bt:Sets DefaultMinVersion="1.5">
-        <bt:Set Name="Mailbox" MinVersion="1.5"/>
+        <bt:Set Name="Mailbox"/>
       </bt:Sets>
     </Requirements>
     <Hosts>
@@ -68,7 +64,6 @@
                     <bt:Image size="80" resid="icon80"/>
                   </Icon>
                   <Action xsi:type="ShowTaskpane">
-                    <TaskpaneId>ButtonId1</TaskpaneId>
                     <SourceLocation resid="taskpaneUrl"/>
                   </Action>
                 </Control>

@@ -86,5 +86,18 @@
         <bt:String id="TaskpaneButton.Tooltip" DefaultValue="ATOM Aviation Deal support add-in(QA)"/>
       </bt:LongStrings>
     </Resources>
+    <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.1"
+      xsi:type="VersionOverridesV1_1">
+      <WebApplicationInfo>
+        <Id>4df68765-37ba-4b6a-9fea-525c0fb7d1b9</Id>
+        <Resource>api://outlook-addin-qa.elsecolimited.com:8092/4df68765-37ba-4b6a-9fea-525c0fb7d1b9</Resource>
+        <Scopes>
+          <Scope>profile</Scope>
+          <Scope>openid</Scope>
+          <Scope>offline_access</Scope>
+          <Scope>access_as_user</Scope>
+        </Scopes>
+      </WebApplicationInfo>
+    </VersionOverrides>
   </VersionOverrides>
 </OfficeApp>

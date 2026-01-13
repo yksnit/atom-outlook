@@ -3,7 +3,7 @@
 A minimal Outlook task-pane add-in that inserts a quick reply template into a draft message. The add-in is fully static so it can be hosted on GitHub Pages.
 
 ## Setup
-- Replace `<your-github-username>` in `manifest.xml` with your GitHub username (and adjust the repo name if you change it).
+- URLs in `manifest.xml` point to `https://yksnit.github.io/atom-outlook/` (update if you rename the repo or host elsewhere).
 - Update `ProviderName` and the reply template text in `taskpane.js` as you like.
 
 ## Run locally
@@ -12,8 +12,8 @@ A minimal Outlook task-pane add-in that inserts a quick reply template into a dr
 
 ## Publish to GitHub Pages
 - Push this repo to GitHub and enable Pages for the `main` branch (root or `/` folder).
-- Your files will be served from `https://<your-github-username>.github.io/sample-outlook/`.
-- Confirm the manifest is reachable at `https://<your-github-username>.github.io/sample-outlook/manifest.xml`.
+- Your files will be served from `https://yksnit.github.io/atom-outlook/`.
+- Confirm the manifest is reachable at `https://yksnit.github.io/atom-outlook/manifest.xml`.
 
 ## Sideload the add-in
 - Outlook on the web: Settings (gear) → View all Outlook settings → Mail → Customize actions → Add-ins → Upload custom add-in. Provide the manifest URL from GitHub Pages or upload the local `manifest.xml`.

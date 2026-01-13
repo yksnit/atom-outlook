@@ -245,8 +245,8 @@
       </Resources>
 
       <WebApplicationInfo>
-        <Id>4df68765-37ba-4b6a-9fea-525c0fb7d1b9</Id>
-        <Resource>api://outlook-addin-qa.elsecolimited.com:8092/4df68765-37ba-4b6a-9fea-525c0fb7d1b9</Resource>
+        <Id>eaa8ca64-f949-4933-8446-0914a4df19dd</Id>
+        <Resource>api://yksnit.github.io/eaa8ca64-f949-4933-8446-0914a4df19dd</Resource>
         <Scopes>
           <Scope>profile</Scope>
           <Scope>openid</Scope>
